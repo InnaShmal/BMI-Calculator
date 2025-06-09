@@ -145,7 +145,7 @@ p {
     grid-template-columns: repeat(6, 1fr);
     gap: 32px;
     margin: 115px auto 0px auto;
-    padding: 0px 140px 0px 140px;
+    padding: 0px 140px 115px 140px;
 }
 
 #blueRec {
@@ -211,8 +211,29 @@ p {
     height: 31px;
 }
 
-input[type='radio']:checked {
-    background-color: #e1e7fe;
+input[type='radio'] {
+    position: relative;
+}
+input::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: 50%;
+}
+input:checked::before {
+    left: 8px;
+    top: 8px;
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 0px 0px 9px #e1e7fe;
 }
 
 .inputWrapper label {
@@ -807,7 +828,7 @@ h3 {
     #secondRow {
         flex-direction: column;
         padding-left: 0px;
-        padding-right: 0px;
+        padding-right: 0px !important;
         gap: 48px;
         #rightSecondRow {
             max-width: 328px;
@@ -830,7 +851,7 @@ h3 {
     }
 
     #containerForImg {
-        margin-left: 0px;
+        margin-left: 0px !important;
         margin-bottom: 0;
         width: 100%;
     }
@@ -937,3 +958,247 @@ h3 {
         display: none;
     }
 }
+
+@media screen and (max-width: 1100px) {
+    #firstRow,
+    #secondRow {
+        max-width: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    #firstRow {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding-left: 41px;
+        padding-right: 41px;
+        text-align: center;
+        padding-bottom: 88px;
+    }
+
+    #firstSlideText {
+        padding: 0px;
+        width: 100%;
+    }
+
+    #mainIcon {
+        position: unset;
+        align-self: center;
+        margin-top: 32px;
+        margin-bottom: 40px;
+        width: 36.75px;
+        height: 36.75px;
+    }
+
+    h1 {
+        align-self: center;
+        max-width: 380px;
+        width: 100%;
+        font-size: 48px;
+    }
+
+    .description {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    #blueRec {
+        width: 100%;
+        height: 640px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        border-bottom-right-radius: 20px;
+    }
+
+    #calculator {
+        margin-top: 40px;
+        margin-left: 0;
+        margin-right: 0;
+        flex: 1;
+    }
+
+    #calculatorContainer {
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+        text-align: start !important;
+    }
+
+    .inputWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .inputWrapper input {
+        height: 77px;
+    }
+
+    .inputWrapper label {
+        color: #5e6e85;
+        height: 14px;
+    }
+
+    #heightFt,
+    #heightIn {
+        padding-right: 40px;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        border: 1px solid #5e6e85;
+        border-radius: 12px;
+    }
+
+    #bmiCounted p {
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 1.5;
+        color: white;
+    }
+
+    #bmiCounted {
+        height: 149px;
+    }
+
+    #secondRow {
+        padding-right: 46px;
+        padding-bottom: 95px;
+        gap: 72px;
+        #rightSecondRow {
+            max-width: 331px;
+            width: 100%;
+        }
+    }
+
+    #imgMan {
+        min-width: 375px;
+    }
+
+    #textSecondRow {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    #textSecondRow p {
+        font-size: 16px;
+        color: #5e6e85;
+    }
+
+    #textSecondRow h2 {
+        font-size: 32px;
+    }
+
+    #containerForImg {
+        margin-left: -103px;
+        margin-bottom: 0;
+        max-width: 435px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #fourthRow {
+        .card:nth-child(1) {
+            grid-column: 1/7;
+            grid-row: 1;
+        }
+
+        .card:nth-child(2),
+        .card:nth-child(4) {
+            grid-column: span 3;
+            grid-row: 2;
+        }
+
+        .card:nth-child(5),
+        .card:nth-child(6) {
+            grid-column: span 3;
+            grid-row: 3;
+        }
+
+        .card:nth-child(7) {
+            grid-column: 2/6;
+            grid-row: 4;
+            justify-self: center;
+            &.limitation {
+                max-width: 301px;
+                width: 100%;
+            }
+            justify-content: center;
+        }
+        gap: 16px;
+        padding: 0px 41px 98px 41px;
+    }
+
+    .limitation {
+        width: auto;
+        box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+        padding: 32px;
+        border-radius: 10px;
+    }
+
+    .headerOfForthRow > h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .headerOfForthRow > p {
+        text-align: center;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .headerOfForthRow {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        gap: 32px;
+        align-self: center;
+        justify-self: center;
+    }
+
+    #curvedLineLeft,
+    #curvedLineRight {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #secondRow {
+        flex-direction: column;
+        padding-left: 0px;
+        padding-right: 0px !important;
+        gap: 48px;
+        #rightSecondRow {
+            max-width: 328px;
+            width: 85%;
+        }
+    }
+
+    #textSecondRow {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    #textSecondRow p {
+        font-size: 16px;
+        color: #5e6e85;
+    }
+
+    #textSecondRow h2 {
+        font-size: 32px;
+    }
+
+    #containerForImg {
+        margin-left: 0px !important;
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
+
+
