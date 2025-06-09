@@ -138,7 +138,7 @@ window.addEventListener('load', () => {
     metricFields.style.display = 'block';
     imperialFields.style.display = 'none';
 
-    [heightInput, weightInput].forEach((input) => (input.value = '0'));
+    [heightInput, weightInput].forEach((input) => (input.value = ''));
 
     bmiValue.textContent = '';
     healthyText.innerHTML = '';

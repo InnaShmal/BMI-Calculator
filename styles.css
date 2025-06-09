@@ -334,7 +334,7 @@ input:checked::before {
 }
 
 #bmiCounted {
-    height: 166px;
+    height: auto;
     background-color: #345ff6;
     color: white;
     border-radius: 10px 90px 90px 10px;
@@ -345,7 +345,7 @@ input:checked::before {
 }
 
 #bmiWelcome {
-    height: 166px;
+    height: auto;
     background-color: #345ff6;
     color: white;
     border-radius: 10px 90px 90px 10px;
@@ -583,7 +583,7 @@ h3 {
     }
 
     #bmiCounted {
-        height: 149px;
+        height: auto;
     }
 
     #secondRow {
@@ -1063,7 +1063,7 @@ h3 {
     }
 
     #bmiCounted {
-        height: 149px;
+        height: auto;
     }
 
     #secondRow {
