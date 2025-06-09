@@ -1201,4 +1201,17 @@ h3 {
     }
 }
 
+@media screen and (max-width: 450px) {
+    #bmiCounted {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
+        padding: 24px;
+        border-radius: 16px;
+    }
 
+    #bmiCounted > div {
+        width: 100%;
+    }
+}
